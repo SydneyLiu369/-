@@ -1,0 +1,56 @@
+# 1-1
+letter =  input()
+newLetter = []
+
+for i in range(len(letter)):
+    newLetter.insert(i, letter[(len(letter) - 1 - i)])
+
+newL = "".join(newLetter)
+print(newL)
+
+# 1-2
+sentence = input()
+sentenceLst = sentence.split()
+
+newLetter = []
+def spin(letter):
+    for i in range(len(letter)):
+        newLetter.insert(i, letter[(len(letter) - 1 - i)])
+    newL = "".join(newLetter)
+
+    return newL
+
+newS = spin(sentence).split()
+
+newSentenceLst = []
+for i in range(len(newS)):
+    newSentenceLst.insert(i, newS[(len(newS) - 1 - i)])
+
+newSentence = " ".join(newSentenceLst)
+
+print(newSentence)
+
+# 2
+num = int(input())
+
+numLst= []
+for i in range(1, num+1):
+    numLst.append(i)
+
+newLst = []
+for i in range(len(numLst)):
+    if int(numLst[i])%3 != 0 and int(numLst[i])%5 != 0 or int(numLst[i])%15 == 0:
+        newLst.append(numLst[i])
+
+print(len(newLst))
+
+# 3
+選混和袋子
+
+如果從混和的標示拿出原子筆，表示該袋全部都是原子筆。
+標示鉛筆的則是混和，標示原子筆的是鉛筆。
+
+若拿出鉛筆，則該袋為鉛筆，標示鉛筆的為原子筆，標示原子筆的為混和。
+
+# 4
+的確是每人都付270元，但900元應該是「每人折扣後的錢(270)」加上「被折扣的價錢(90)」，不應該加上服務生私吞的60元。
